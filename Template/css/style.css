@@ -1,0 +1,95 @@
+.footer{
+	color: black;
+	text-align: center;
+	font-size: 12px;
+	clear:both;
+}
+a:link{
+	color:black;
+	text-decoration: none;
+}
+
+a:visited{
+	color:black;
+	text-decoration: none;
+}
+ a:hover{
+	color:#66aabb;
+	text-decoration: none;
+}
+.article{
+        line-height:25px;
+        float:left;
+        overflow:hidden;
+        width:80%;
+        font-size:18px;
+        padding-left: 50px;
+        text-align:left;
+        
+}
+
+#text{
+        padding: 2.5%;
+        float:left;
+        width:60%;
+        font-size:18px;
+        text-align:left;
+        background-color:#F3F3F3;
+}
+#list{
+	display: inline; /*防止IE6双边距*/
+	line-height:25px;
+        padding: 2.5%;
+        float:left;      
+        font-size:16px;
+        width:30%;
+        background-color:#FFFFFF;
+        }
+
+div.header{
+	margin-left:0px;
+	margin-right:0px;
+	background-color:#CCCC55;
+	color:#FFF;
+}
+hr{
+    border-top:1px solid #EEEEEE; /*其实是颜色*/
+}
+
+/* 导航栏样式 */
+body,div,p{  
+	margin:auto;   
+	padding:auto;  
+}  
+.nav{  /*导航*/
+	background-color:#444444;  
+	position:fixed;  
+        font-size:20px;
+        font-family: "冬青黑体简体中文","华文黑体","微软雅黑","黑体","宋体";
+	left:0px;  
+	right:0px;  
+	width:100%;  
+	text-align:left;  
+	height:37px;  
+}  
+.nav a{  
+        color:#FFFFFF;
+	padding:20px;  
+	line-height:35px;  
+	text-decoration:none;  
+}
+.nav a:hover{
+	color:#55eeff;
+	text-decoration:none;
+}
+
+#navslip{  /*导航栏上的下划线*/
+	height:1px;  
+	background-color:#eeeeee;   
+	position:absolute;   
+	bottom:5px;   
+	width:0px;  
+	left:0px;  
+	display:none;  
+	overflow:hidden;  
+}  
