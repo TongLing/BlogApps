@@ -4,6 +4,9 @@
 	font-size: 12px;
 	clear:both;
 }
+body{
+      background-color:#Faf4E0;
+}
 a:link{
 	color:black;
 	text-decoration: none;
@@ -13,7 +16,7 @@ a:visited{
 	color:black;
 	text-decoration: none;
 }
- a:hover{
+a:hover{
 	color:#66aabb;
 	text-decoration: none;
 }
@@ -34,7 +37,7 @@ a:visited{
         width:60%;
         font-size:18px;
         text-align:left;
-        background-color:#F3F3F3;
+        background-color:#F9FFE5;
 }
 #list{
 	display: inline; /*防止IE6双边距*/
@@ -43,7 +46,7 @@ a:visited{
         float:left;      
         font-size:16px;
         width:30%;
-        background-color:#FFFFFF;
+        background-color:#FDf9E0;
         }
 
 div.header{
@@ -53,7 +56,8 @@ div.header{
 	color:#FFF;
 }
 hr{
-    border-top:1px solid #EEEEEE; /*其实是颜色*/
+    border-top:0px solid #F9FFE5; /*其实是颜色*/
+
 }
 
 /* 导航栏样式 */

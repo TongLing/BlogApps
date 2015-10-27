@@ -12,10 +12,10 @@
         <title>首页 - 童凌的官方网站</title>
 </head>
 <body>
-        
+        <?php require_once("/home/tongling/public_html/db_info.php");?>
 
         <!--导航栏-->
-        <?php  require_once("/home/tongling/public_html/Template/header.php");?>
+        <?php  require_once($header_index);?>
                 <br><br><br>
         <div id = "wrapper">
         	<div id = "text">
@@ -23,12 +23,12 @@
         1、将所有网页的组成部分分成多个不同的基本模块，能封装的尽量封装成单个php文件 
          <ul>
                 <li><s>头部导航栏</s></li>                            
-                <li>一些基本的按钮</li>
-                <li>正文内容</li>
-                <li>尾部版权声明</li>
-                <li>ps:把css文件也分开写，归纳到不同的文件夹</li>
-                <li>前端的页面归纳到同一个文件夹</li>
-                <li>修改成两栏的配置
+                <li><s>一些基本的按钮</s></li>
+                <li><s>正文内容</s></li>
+                <li><s>尾部版权声明</s></li>
+                <li><s>ps:把css文件也分开写，归纳到不同的文件夹</s></li>
+                <li><s>前端的页面归纳到同一个文件夹</s></li>
+                <li><s>修改成两栏的配置</s>
         </ul>
         2、2048 Game 做一点修改<p><br>
         3、连接上数据库，创建数据库的基本表<p><br>
@@ -51,7 +51,7 @@
                 </div>
         </div>
         <!-- 页脚内容 -->
-        <?php  require_once("/home/tongling/public_html/Template/footer.php");?>
+        <?php  require_once($footer_index);?>
         
 
 </body>

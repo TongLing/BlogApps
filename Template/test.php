@@ -8,10 +8,9 @@
 	</style>
     </head>
     <body>
-            <?php  require_once("/home/tongling/public_html/Template/header.php");?>
-
-        
+            <?php require_once("/home/tongling/public_html/db_info.php"); ?>
+            <?php  require_once($header_index);?>
         <!-- 页脚内容 -->
-        <?php  require_once("/home/tongling/public_html/Template/footer.php");?>
+        <?php  require_once($footer_index);?>
     </body>
 </html>  

@@ -1,3 +1,5 @@
+<?php require'/home/tongling/public_html/db_info.php'; ?>
+
 <html>
 	<meta http-equiv = "Content-Type" content = "text/html" charset ="UTF-8"/>
 	<meta http-equiv = "Content-Language" content="zh-CN"/>
@@ -14,13 +16,13 @@
 <body>
 
         <!--导航栏-->
-        <?php  require_once("/home/tongling/public_html/Template/header.php");?>
+        <?php  require_once($header_index);?>
         
         <br><br><br>
         <div id = "wrapper">
         	<div id = "text">
         		<div align ="center">
-        			<a href = "/Template/AcmSteps.php">ACM Steps<input type = "button" value = "上一篇"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        			<a href = "/AcmSteps/00.php">ACM Steps<input type = "button" value = "上一篇"></a>&nbsp;&nbsp;&nbsp;&nbsp;
         			<span><a href = "/AcmSteps/02.php"><input type = "button" value = "下一篇">ACM比赛的特点</a></span>
        		 	</div>
 
@@ -58,18 +60,12 @@
       		        </div>
         	</div>
         	<div id = "list">
-                	今天晚上吃点啥？<p>
-               		 马老板又发工资了！2015年阿里奖金大幅提升<p>
-                	童凌的官方网站<p>
-            		实验室一景<p>
-            		2048爆红网络<p>
-            		未添加的新闻...<p>
-            		未添加的新闻...<p>
+                <?php require_once("/home/tongling/public_html/AcmSteps/acmList.php"); ?>
                 </div>
         </div>
         
         <!-- 页脚内容 -->
-        <?php  require_once("/home/tongling/public_html/Template/footer.php");?>
+        <?php  require_once($footer_index);?>
 
 </body>
 </html>

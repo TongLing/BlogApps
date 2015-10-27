@@ -7,8 +7,8 @@
         <a href="/index.php" name = "index">童凌的官方网站</a>
         <a href="/index.php" target="_self" >首页</a>  
         <a href="/WordPress-master" target="_self" >博客</a>  
-        <a href="/Template/AcmSteps.php" target="_self" >Acm Steps</a>  
-        <a href="/2048-game/index.html" target="_self" >2048 Game</a>  
+        <a href="/AcmSteps/00.php" target="_self" >Acm Steps</a>  
+        <a href="/2048-game/index.php" target="_self" >2048 Game</a>  
         <i id="navslip"></i>  
     </div>  
     
