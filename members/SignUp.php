@@ -1,10 +1,12 @@
 <?php //SignUp.php 
+
 ?>
 <html>
 	<head>
 	<title>注册 - 童凌的官方网站</title>
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 	</head>
+
 	<body align = "center">
 		<form  name="form1" method="post" action="add.php">
 			<h1>新用户注册</h1><br>

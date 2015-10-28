@@ -22,7 +22,7 @@
         	<div id = "text">
         		<div align ="center">
         			<a href = "/AcmSteps/02.php">ACM竞赛的特点<input type = "button" value = "上一篇"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        			<span><a href = "/AcmSteps/04.php"><input type = "button" value = "下一篇">正在规划中</a></span>
+        			<span><a href = "/AcmSteps/04.php"><input type = "button" value = "下一篇">关于C语言</a></span>
        		 	</div>
                         <h1>什么是真正的编程能力</h1>
                         <h3>编程能力与计算思维</h3>
@@ -48,7 +48,7 @@
 			<p><br>
 		        <div align ="center">
 		        	<a href = "/AcmSteps/02.php">ACM竞赛的特点<input type = "button" value = "上一篇"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-		       	        <span><a href = "/AcmSteps/04.php"><input type = "button" value = "下一篇">正在规划中</a></span>
+		       	        <span><a href = "/AcmSteps/04.php"><input type = "button" value = "下一篇">关于C语言</a></span>
       		        </div>
         	</div>
         	<div id = "list">

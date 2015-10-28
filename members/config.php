@@ -11,6 +11,5 @@ $database = "TONGLING";
  or die("could not connect mysql");
  mysql_select_db($database,$conn)
  or die("could not open database");
- echo"config.php:成功连接到数据库<br>";
 
 ?>

@@ -1,7 +1,6 @@
-<meta charset = "UTF-8">
-<?php
+<?php session_start();//启动会话
 include 'config.php';
-session_start();//启动会话
+
 //获取用户的登录信息。用户名，密码，是否保存信息
 $UserName1=$_POST["UserName"];
 $Password1=$_POST["Password"];
@@ -37,12 +36,9 @@ if ($row)
     $query="update als_signup set NumLoginFail='0' where UserName='$UserName1'";
     $result=mysql_query($query);
     //创建会话，保存登录信息
-    session_unset();//删除会话
-    session_destroy();
-    session_register("Password");//创建会话变量，保存密码
-    $HTTP_SESSION_VARS["Password"]=$Password1;
-    session_register("UserName");//保存用户名
-    $HTTP_SESSION_VARS["UserName"]=$UserName1;
+    $_SESSION["Password"]=$Password1;
+    $_SESSION["UserName"]=$UserName1;
+
     //发送cookie到客户端，密码被加密
     if ($Remember=="1")
     {
@@ -50,11 +46,13 @@ if ($row)
      setcookie("RememberCookiePassword",md5($Password1),(time()+604800));
     }
     //登录成功，页面转到管理页面
-    header("refresh:1;url=http://localhost/members/manage.php");
-       exit;
+    echo "登陆成功";
+    echo " <a href = 'manage.php'>点击这里</a>进入后台页面<br>";
+    
    }
    else
    {
+
        //密码错误，登录失败
        //检查上次登录失败时间是否在5min之内，如果不是，则登录失败次数增加1
       $datetime=date("d-m-Y G:i ",strtotime("-5 minutes"));//获取5分钟以前的时间
@@ -69,7 +67,8 @@ if ($row)
        $result=mysql_query($query);
        //返回到登录页面
        header("refresh:5;url=http://localhost/members/login.php");
-       echo "密码错误，请重新输入<br>5秒后自动返回";
+       echo "密码错误，请重新输入<br>";
+       echo "<a href='login.php'>点击这里</a>返回到登陆界面";
        }
        else  //在5min之内，只修改登录失败时间
        {
@@ -77,7 +76,8 @@ if ($row)
        $result=mysql_query($query);
        //返回到登录页面
        header("refresh:5;url=http://localhost/members/login.php");
-       echo "密码错误，请重新输入<br>5秒后自动返回";
+       echo "密码错误，请重新输入<br>";
+       echo "<a href='login.php'>点击这里</a>返回到登陆界面";
        }
    }
   }
@@ -99,7 +99,6 @@ if ($row)
   $result=mysql_query($query);
   header("refresh:5;url=http://localhost/members/login.php");
   echo "您的账号目前被锁定，半个小时后自动解锁。请解锁后登录。";
-  echo "<br>5秒后自动返回";
   exit;
   }
   }

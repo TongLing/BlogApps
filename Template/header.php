@@ -1,3 +1,7 @@
+<?php 
+session_start();
+$UserName1 = $_SESSION['UserName'];
+?>
 <meta http-equiv = "Content-Type" content = "text/html" charset ="UTF-8"/>
 <style type = "text/css">
       @import"/Template/css/style.css";
@@ -8,7 +12,18 @@
         <a href="/index.php" target="_self" >首页</a>  
         <a href="/WordPress-master" target="_self" >博客</a>  
         <a href="/AcmSteps/00.php" target="_self" >Acm Steps</a>  
-        <a href="/2048-game/index.php" target="_self" >2048 Game</a>  
+        <a href="/2048-game/index.php" target="_self" >2048 Game</a> 
+        
+        <?php 
+        if ($_SESSION['UserName'] != "")
+        {echo "<a href='/members/manage.php'>欢迎,";
+         echo $UserName1;
+         echo "</a>" ;
+         }
+        else
+        {echo "<a href='/members/login.php'>登录</a> ";}
+        ?>
+        
         <i id="navslip"></i>  
     </div>  
     
