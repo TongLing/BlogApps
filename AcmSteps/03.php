@@ -10,7 +10,7 @@
 	<style type = "text/css">
 		@import"/Template/css/style.css";
 	</style>
-        <title>ACM竞赛的特点 - 童凌的官方网站</title>
+        <title>什么是真正的编程能力 - 童凌的官方网站</title>
 </head>
 <body>
 

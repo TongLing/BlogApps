@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+	<title>注册-童凌的官方网站</title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <style>
+		*{margin:0;padding:0;}
+	body{
+		background:#EBEBEB;
+		font-size:1em;
+		color:#111111;
+	}
+	#wrapper{
+		width:300px;
+		margin:150px auto 0;
+		background:#FFFFFF;
+		border-radius:8px;
+		position:relative;
+		padding:30px;
+		box-shadow:0px 6px 6px -6px;
+	}
+	
+	table,h2{
+		margin:0 auto;
+	}
+	input[type="submit"]{
+		padding:0 10px 0 10px;
+	}
+	td{
+		padding:4px;
+	}
+		</style>
+	</head>
+ 	
+	<body align = "center">
+    <div id="wrapper">
+		<form  name="form1" method="post" action="add.php">
+			
+		<table>
+            <h2>新用户注册</h2>
+			<tr>
+				<td><input name="UserName" type="text" id="UserName" size="20" placeholder = "输入用户名"></td>
+			</tr>
+			<tr>
+				<td><input name="Password" type="password" id="Password" size="20" placeholder = "输入密码"></td>
+			</tr>
+			<tr>
+				<td><input name="ConfirmPassword" type="password" id="ConfirmPassword" size="20" placeholder = "确认密码"></td>
+			</tr>
+			<tr>
+				<td><input name="Email" type="text" id="Email" size="20" placeholder = "Email地址"></td>
+			</tr>
+		</table>
+		<input name="SignUp" type="submit" id="SignUp" value="注册">
+		<p>如果您已经有账号，请点击<a href="login.php">这里</a>登陆。</p>
+		</form>
+        </div>
+	</body>
+  
+</html>

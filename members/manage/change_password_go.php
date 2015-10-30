@@ -21,17 +21,14 @@ $query="update als_signup set Password='$NewPassword1' where UserName='{$_SESSIO
 $result=mysql_query($query);
 $_SESSION["Password"]=$NewPassword1;
 //修改成功，跳转回到默认管理页面
-header("refresh:3;url=http://localhost/members/manage.php");
-echo "密码修改成功，3秒钟后自动返回到管理页面";
-exit;
+echo "密码修改成功！";
 }
 else
 {
 //原始密码输入错误，导致数据库表查询失败
 //返回修改密码页面，重新输入
-header("refresh:3;url=http://localhost/members/manage/change_password.php");
-echo "原始密码输入错误，请重新输入<br>3秒钟后自动返回";
-exit;
+echo "原始密码输入错误<br>";
+echo "<a href = '/members/manage/change_password.php'>重新修改密码</a>";
 }
 }
 else
@@ -39,16 +36,15 @@ else
 if ($OldPassword1=="")//如果原始密码为空
 {
 //返回修改密码页面，重新输入
-header("refresh:3;url=http://localhost/members/manage/change_password.php");
-echo "原始密码不能为空，请重新输入<br>3秒钟后自动返回";
-exit;
+echo "原始密码不能为空<br>";
+echo "<a href = '/members/manage/change_password.php'>重新修改密码</a>";
 }
 else //如果新密码两次输入不一致
 {
 //返回修改密码页面，重新输入
-header("refresh:3;url=http://localhost/members/manage/change_password.php");
-echo "新密码两次输入不一致，请重新输入<br>3秒钟后自动返回";
-exit;
+
+echo "新密码两次输入不一致，请重新输入";
+echo "<a href = '/members/manage/change_password.php'>重新修改密码</a>";
 }
 }
 ?>

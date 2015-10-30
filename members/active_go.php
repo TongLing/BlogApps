@@ -10,8 +10,6 @@
 $UserName1=$_POST["UserName"];
 $actNum1=trim($_POST["actNum"]," ");
 
-echo "你输入的用户名是$UserName1";
-echo "你输入的激活码是$actNum1";
 
 include 'config.php';
 
@@ -26,7 +24,8 @@ if ($row)
  $result=mysql_query($query);
  ?>
  您已经成功激活账号。<br>
- 请点击<a href="login.php">这里</a>登陆
+ 请点击<a href="login.php">这里</a>登陆<br>
+ 点击<a href="/index.php">这里</a>回到首页
  <?php
 }
 else

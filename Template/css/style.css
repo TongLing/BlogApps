@@ -4,8 +4,16 @@
 	font-size: 12px;
 	clear:both;
 }
+.comment
+{
+    font-size:14px;
+}
+.content
+{
+    font-size:12px;
+}
 body{
-      background-color:#Faf4E0;
+      background-color:#FFFFFF
 }
 a:link{
 	color:black;
@@ -37,7 +45,7 @@ a:hover{
         width:60%;
         font-size:18px;
         text-align:left;
-        background-color:#F9FFE5;
+        background-color:#EEEEF3;
 }
 #list{
 	display: inline; /*防止IE6双边距*/
@@ -46,7 +54,7 @@ a:hover{
         float:left;      
         font-size:16px;
         width:30%;
-        background-color:#FDf9E0;
+        background-color:#ffffff;
         }
 
 div.header{
@@ -56,17 +64,23 @@ div.header{
 	color:#FFF;
 }
 hr{
-    border-top:0px solid #F9FFE5; /*其实是颜色*/
+    border-top:1px solid #CCCCCC; /*其实是颜色*/
 
 }
 
 /* 导航栏样式 */
 body,div,p{  
+        color:#011F26;
+        font-family: "微软雅黑","宋体";
 	margin:auto;   
 	padding:auto;  
 }  
-.nav{  /*导航*/
-	background-color:#444444;  
+.nav{//设置透明度
+        filter:alpha(opacity=70); 
+        -moz-opacity:0.7; 
+        opacity:0.7;
+	
+	background-color:#030303;  
 	position:fixed;  
         font-size:20px;
         font-family: "冬青黑体简体中文","华文黑体","微软雅黑","黑体","宋体";
@@ -77,7 +91,7 @@ body,div,p{
 	height:37px;  
 }  
 .nav a{  
-        color:#FFFFFF;
+        color:#EEEEEE;
 	padding:20px;  
 	line-height:35px;  
 	text-decoration:none;  

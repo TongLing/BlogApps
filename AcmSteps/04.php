@@ -22,7 +22,7 @@
         	<div id = "text">
         		<div align ="center">
         			<a href = "/AcmSteps/03.php">什么是真正的编程能力<input type = "button" value = "上一篇"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        			<span><a href = "/AcmSteps/05.php"><input type = "button" value = "下一篇">正在规划中</a></span>
+        			<span><a href = "/AcmSteps/05.php"><input type = "button" value = "下一篇">与编程相关的硬件</a></span>
        		 	</div>
        		 	
        		 	<h1>C语言</h1>
@@ -46,7 +46,7 @@
 			<p><br>
 		        <div align ="center">
 		        	<a href = "/AcmSteps/03.php">什么是真正的编程能力<input type = "button" value = "上一篇"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        			<span><a href = "/AcmSteps/05.php"><input type = "button" value = "下一篇">正在规划中</a></span>
+        			<span><a href = "/AcmSteps/05.php"><input type = "button" value = "下一篇">与编程相关的硬件</a></span>
       		        </div>
         	</div>
         	<div id = "list">

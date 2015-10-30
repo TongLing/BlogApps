@@ -23,7 +23,6 @@ for ($i=1;$i<=20;$i++)//生成一个20个字符的激活码
 {
  $actnum.=$chars_for_actnum[mt_rand(0,count($chars_for_actnum)-1)];
 }
-echo"$actnum";
 return $actnum;
 }
 //判断用户名函数
@@ -155,11 +154,7 @@ if ($error==false) //$error==false表示没有错误
  $Datetime=date("d-m-y G:i");//获取注册时间，也就是数据写入到用户表的时间
  $query="insert into als_signup (UserName,Password,Email,actNum,UserLevel,SignUpdate,LastLogin,LastLoginFail,NumLoginFail)
  values ('$UserName1','$Password1','$Email1','$actnum','1','$Datetime','0','0','0')";
- echo "用户名：$UserName1";
-echo "密码：$Password1";
-echo "确认密码：$ConfirmPassword1";
-echo "Email：$Email1";
-echo "激活码：$actnum";
+
  $result=mysql_query($query);
  $to=$Email1;//用户注册的邮箱
     $subject="激活码";

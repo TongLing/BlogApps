@@ -1,0 +1,182 @@
+﻿<html>
+	<head>
+		<title>New Document</title>
+		<style type = "text/css">
+		#Field {
+			color: #222222;
+			width: 100%;
+			text-align: left;
+		}
+		#hint {
+			color:#CCCCCC;
+		}
+		</style>
+
+		<script>
+		var flag1 = false;
+		var flag2 = false;
+		var flag3 = false;
+		var Usr;
+		var Pwd;
+		var PwdCfm;
+		//处理用户名
+		setInterval(function(event){
+ 		if(Usr != document.getElementById("Username").value){
+ 			Usr = document.getElementById('Username').value;
+			var hint = document.getElementById('hintUsrname');
+			if (Usr ==="输入账号" || Usr ==="")
+			{
+				hint.innerText = "注册名在6-16位之间，请使用数字和英文字符";
+				hint.style.color = "#000000"
+				hint.style.fontWeight = "normal";
+				flag1 = false;
+				return ;
+			}
+			if (Usr.length < 6)
+			{
+					hint.innerText = "注册名不能少于6位";
+					hint.style.color = "#FF0000"
+					hint.style.fontWeight = "bold";
+					flag1 = false;
+			}
+			else if (Usr.length > 16)
+			{
+					hint.innerText = "注册名不能多于16位";
+					hint.style.color = "#FF0000"
+					hint.style.fontWeight = "bold";
+					flag1 = false;
+			}
+			else
+			{
+					hint.innerText = "通过！";
+					hint.style.color = "#007700"
+					hint.style.fontWeight = "bold";
+					flag1 = true;
+			}
+		}
+		},1000);
+		//处理密码
+		setInterval(function(event){
+ 		if(Pwd != document.getElementById("Password").value){
+ 			Pwd = document.getElementById('Password').value;
+			var hint = document.getElementById('hintPwd');
+			if (Pwd ==="")
+			{
+				hint.innerText = "密码在6-16位之间";
+				hint.style.color = "#000000"
+				hint.style.fontWeight = "normal";
+				flag2 = false;
+				return ;
+			}
+			if (Pwd.length < 6)
+			{
+					hint.innerText = "密码不能少于6位";
+					hint.style.color = "#FF0000"
+					hint.style.fontWeight = "bold";
+					flag2 = false;
+			}
+			else if (Pwd.length > 16)
+			{
+					hint.innerText = "密码不能多于16位";
+					hint.style.color = "#FF0000"
+					hint.style.fontWeight = "bold";
+					flag2 = false;
+			}
+			else
+			{
+					hint.innerText = "通过！";
+					hint.style.color = "#007700"
+					hint.style.fontWeight = "bold";
+					flag2 = true;
+			}
+		}
+		},1000);
+		//处理重复密码
+		setInterval(function(event){
+		if (PwdCfm != document.getElementById('PasswordConfirm').value)
+		{
+			Pwd = document.getElementById('Password').value;
+			PwdCfm = document.getElementById('PasswordConfirm').value;
+			var hint = document.getElementById('hintPwdConfirm');
+			if (PwdCfm === "")
+			{
+				hint.innerText = "重复密码";
+				hint.style.color = "#000000";
+				hint.style.fontWeight="normal";
+				flag3 = false;
+				return ;
+			}
+			else
+			{
+				if (Pwd == PwdCfm)
+				{
+					hint.innerText = "通过！";
+					hint.style.color = "#007700";
+					hint.style.fontWeight = "normal";
+					flag3= true;
+				}
+				else
+				{
+					hint.innerText = "两次密码输入不一致";
+					hint.style.color = "#FF0000";
+					hint.style.fontWeight = "bold";
+					flag3 = false;
+				}
+			}
+		}
+		},1000);
+		function resetUsername()
+		{
+			if (document.getElementById("Username").value == "输入账号") 
+			{
+				document.getElementById("Username").value = "";
+			}
+		}
+		function resetAll()
+		{
+			document.getElementById("Username").value = "";
+			document.getElementById("Password").value = "";
+			document.getElementById("PasswordConfirm").value = "";
+		}
+		function Submit()
+		{
+			if (flag1 && flag2 && flag3)
+				{alert("注册成功!");}
+			else 
+			{alert("注册失败,用户信息填写有误，请检查用户信息");}
+		}
+		</script>
+	</head>
+
+	<body>
+		<div id = "Field">
+		<fieldset>
+			<legend align = "center" width = "50%" color = "#DDDDDD"> 新用户注册
+			</legend>
+			<p><input type = "text" id = "Username" name = "username" value = "输入账号" onClick = "resetUsername()" onKeyUp ="UsrnameIsLegal()">
+
+			<span id = "hintUsrname"> 
+				请使用数字和英文字符
+			</span>
+
+			</p>
+			<p>
+			<input type = "password" id ="Password" name = "pwd">
+
+			<span id ="hintPwd"> 
+				密码在6-16位之间
+			</span>
+			</p>
+			<p>
+			<input type = "password" id = "PasswordConfirm" name = "pwdconfirm">
+			<span id ="hintPwdConfirm"> 
+				重复密码
+			</span>
+			</p>
+			<input type ="button" name = "submit" value = "用户注册" onClick = "Submit()">
+			<input type = "button" name = "reset" value = "重置" onClick = "resetAll()">
+		</fieldset>
+		</div>
+	</body>
+
+</html>

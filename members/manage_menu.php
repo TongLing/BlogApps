@@ -10,9 +10,9 @@
 include 'config.php';
 $UserName1 = $_SESSION["UserName"];
 $Password1 = $_SESSION["Password"];
-echo"你好，$UserName1<br>您的密码是$Password1<br>";
-echo "<a href = '/index.php'>回到首页</a><br>";
+echo"你好，$UserName1<br>";
 ?>
+<a href = '/index.php' target="_parent">回到首页</a><br>
 <a href="manage/menu_default.php" target="right">我的地盘</a><br>
 <a href="manage/manage_menu_1.php" target="right">功能菜单1</a><br>
 <a href="manage/manage_menu_2.php" target="right">功能菜单2</a><br>

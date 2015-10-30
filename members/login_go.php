@@ -1,3 +1,26 @@
+
+
+<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <style>
+		*{margin:0;padding:0;}
+	body{
+		background:#EBEBEB;
+		font-size:1em;
+		color:#111111;
+	}
+	#wrapper{
+		width:300px;
+		margin:150px auto 0;
+		background:#FFFFFF;
+		border-radius:8px;
+		position:relative;
+		padding:30px;
+		box-shadow:0px 6px 6px -6px;
+	}
+		</style>
+</head>
+<body>
 <?php session_start();//启动会话
 include 'config.php';
 
@@ -46,9 +69,11 @@ if ($row)
      setcookie("RememberCookiePassword",md5($Password1),(time()+604800));
     }
     //登录成功，页面转到管理页面
-    echo "登陆成功";
-    echo " <a href = 'manage.php'>点击这里</a>进入后台页面<br>";
-    
+    echo'<div id = "wrapper"> ';
+    echo "<p>登陆成功</p>";
+    echo " <a href = 'manage.php'><p>点击这里</a>进入后台页面</p>";
+    echo " <a href = '/index.php'><p>点击这里</a>回到首页</p>";
+        echo '</div> ';
    }
    else
    {
@@ -66,18 +91,22 @@ if ($row)
        $query="update als_signup set LastLoginFail='$timenow' where UserName='$UserName1'";
        $result=mysql_query($query);
        //返回到登录页面
-       header("refresh:5;url=http://localhost/members/login.php");
-       echo "密码错误，请重新输入<br>";
-       echo "<a href='login.php'>点击这里</a>返回到登陆界面";
+           echo'<div id = "wrapper"> ';
+       echo "<p>密码错误，请重新输入</p>";
+       echo "<p><a href='login.php'>点击这里</a>返回到登陆界面</p>";
+       echo "<p><a href = '/index.php'>点击这里</a>回到首页<br></p>";
+               echo '</div> ';
        }
        else  //在5min之内，只修改登录失败时间
        {
        $query="update als_signup set LastLoginFail='$timenow' where UserName='$UserName1'";
        $result=mysql_query($query);
        //返回到登录页面
-       header("refresh:5;url=http://localhost/members/login.php");
-       echo "密码错误，请重新输入<br>";
-       echo "<a href='login.php'>点击这里</a>返回到登陆界面";
+       echo'<div id = "wrapper"> ';
+       echo "<p>密码错误，请重新输入</p>";
+       echo "<p><a href='login.php'>点击这里</a>返回到登陆界面</p>";
+       echo "<p><a href = '/index.php'>点击这里</a>回到首页<br></p>";
+       echo '</div> ';
        }
    }
   }
@@ -97,22 +126,31 @@ if ($row)
   $timenow=date("d-m-Y G:i ");
   $query="update als_signup set LastLoginFail='$timenow' where UserName='$UserName1'";
   $result=mysql_query($query);
-  header("refresh:5;url=http://localhost/members/login.php");
-  echo "您的账号目前被锁定，半个小时后自动解锁。请解锁后登录。";
-  exit;
+       echo'<div id = "wrapper"> ';
+       echo "<p>您的账号目前被锁定，半个小时后自动解锁。请解锁后登录。</p>";
+       echo "<p><a href='login.php'>点击这里</a>返回到登陆界面</p>";
+       echo "<p><a href = '/index.php'>点击这里</a>回到首页<br></p>";
+       echo '</div> ';
   }
   }
  }
  //激活码不为0.用户需要激活
     else
     {
-    header("refresh:5;url=http://localhost/members/activate.php");
-    echo "您的账号没有激活，请激活后登陆。<br>5秒后自动跳转到激活页面。";
+    echo'<div id = "wrapper"> ';
+    echo "<p>您的账号没有激活，请激活后登陆。</p>";
+    echo "<p><a href='activate.php'>点击这里</a>激活账号</p>";
+    echo "<p><a href = '/index.php'>点击这里</a>回到首页</p>";
+    echo '</div> ';
     }
 }
 else
 {
-header("refresh:5;url=http://localhost/members/login.php");
-echo "您的用户名不正确，请返回重新输入。<br>5秒后自动返回。";
+    echo'<div id = "wrapper"> ';
+echo "<p>您的用户名不正确，请返回重新输入。</p>";
+echo "<p><a href='login.php'>点击这里</a>返回到登陆界面</p>";
+echo " <p><a href = '/index.php'>点击这里</a>回到首页<br></p>";
+    echo '</div> ';
 }
 ?>
+</body>
